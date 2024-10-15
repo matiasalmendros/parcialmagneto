@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.demo.parcialmagneto.services.DnaServiceTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2024-10-12T21:47:07" hostname="DESKTOP-V7JBT2G" time="0.173">
+  <properties/>
+  <testcase name="testSecondaryRightDiagonals()" classname="org.demo.parcialmagneto.services.DnaServiceTest" time="0.043"/>
+  <testcase name="testTertiaryRightDiagonals()" classname="org.demo.parcialmagneto.services.DnaServiceTest" time="0.004"/>
+  <testcase name="testMainDiagonals()" classname="org.demo.parcialmagneto.services.DnaServiceTest" time="0.008"/>
+  <testcase name="testTertiaryLeftDiagonals()" classname="org.demo.parcialmagneto.services.DnaServiceTest" time="0.004"/>
+  <testcase name="testRows()" classname="org.demo.parcialmagneto.services.DnaServiceTest" time="0.002"/>
+  <testcase name="testSecondaryLeftDiagonals()" classname="org.demo.parcialmagneto.services.DnaServiceTest" time="0.003"/>
+  <testcase name="testColumns()" classname="org.demo.parcialmagneto.services.DnaServiceTest" time="0.006"/>
+  <testcase name="testNonMutant()" classname="org.demo.parcialmagneto.services.DnaServiceTest" time="0.007"/>
+  <testcase name="testMutant1()" classname="org.demo.parcialmagneto.services.DnaServiceTest" time="0.005"/>
+  <testcase name="testMutant2()" classname="org.demo.parcialmagneto.services.DnaServiceTest" time="0.005"/>
+  <testcase name="testMutant3()" classname="org.demo.parcialmagneto.services.DnaServiceTest" time="0.004"/>
+  <testcase name="testMutant4()" classname="org.demo.parcialmagneto.services.DnaServiceTest" time="0.008"/>
+  <testcase name="testMutant5()" classname="org.demo.parcialmagneto.services.DnaServiceTest" time="0.002"/>
+  <testcase name="testNonMutant1()" classname="org.demo.parcialmagneto.services.DnaServiceTest" time="0.002"/>
+  <testcase name="testNonMutant2()" classname="org.demo.parcialmagneto.services.DnaServiceTest" time="0.014"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
