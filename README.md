@@ -83,5 +83,6 @@ Este proyecto permite detectar si un humano es un mutante basándose en su secue
 
 ## Entrega
 - Código Fuente: [Enlace al repositorio de GitHub](https://github.com/matiasalmendros/parcialmagneto)
+- Deploy: [Enlace al repositorio de render](https://parcialmagneto-kkq9.onrender.com)
 - Instrucciones de ejecución: Consultar el archivo README.md en el repositorio.
 - Documentación PDF: [Descargar aquí](URL_DEL_DOCUMENTO_PDF)
