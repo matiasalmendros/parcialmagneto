@@ -1,88 +1,57 @@
 # Proyecto de Detección de Mutantes
 
 ## Descripción
-Este proyecto permite detectar si un humano es un mutante basándose en su secuencia de ADN. Utiliza un método eficiente que verifica la presencia de secuencias de cuatro letras iguales en una matriz de ADN.
+Este proyecto tiene como objetivo detectar si un humano es un mutante basado en su secuencia de ADN. Utiliza un método eficiente para verificar la presencia de secuencias de cuatro letras iguales en una matriz de ADN (6x6).
 
-## Nivel 1: Implementación del Método `isMutant`
+## Funcionalidad
 
-1. **Función**:
-   - La función `isMutant(String[] dna)` determina si la secuencia de ADN corresponde a un mutante.
+### Nivel 1: Implementación del Método `isMutant`
+- **Función**: La función `isMutant(String[] dna)` determina si la secuencia de ADN corresponde a un mutante.
+  
+- **Ejemplo de Uso**:
+    ```java
+    String[] dna = {"ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"};
+    boolean result = isMutant(dna);
+    System.out.println(result); // Debería imprimir "true"
+    ```
 
-2. **Ejemplo de Uso**:
-   ```java
-   String[] dna = {"ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"};
-   boolean result = isMutant(dna);
-   System.out.println(result); // Debería imprimir "true"
-   ```
+### Nivel 2: API REST para Detección de Mutantes
+- **Crear la API REST**: La API está diseñada para detectar si un humano es mutante mediante una secuencia de ADN.
 
-## Nivel 2: API REST para Detección de Mutantes
+- **Hostear la API**: La API está hospedada en un servicio de cloud computing gratuito. [Enlace a la API](https://parcialmagneto-kkq9.onrender.com)
 
-1. **Crear la API REST**:
-   - La API está diseñada para detectar si un humano es mutante mediante una secuencia de ADN.
+- **Endpoints**:
+  - **POST** `/mutant`:
+    - Formato de la Solicitud:
+      ```json
+      {
+          "dna": ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]
+      }
+      ```
+    - Respuesta: 
+      - **200 OK** si el ADN es de un mutante.
+      - **403 Forbidden** si el ADN pertenece a un humano.
 
-2. **Hostear la API**:
-   - La API se encuentra hospedada en un servicio de cloud computing gratuito. [Enlace a la API](http://localhost:8080/swagger-ui/index.html)
+### Nivel 3: Integración de Base de Datos y Estadísticas
+- **Integración de H2**: Se ha añadido una base de datos H2 para almacenar los ADN verificados, permitiendo solo un registro por ADN.
 
-3. **Endpoint del Servicio**:
-   - El servicio para verificar si un humano es mutante se puede acceder en el siguiente endpoint:
-     ```
-     POST /mutant/
-     ```
+- **Endpoint de Estadísticas**:
+  - **GET** `/stats`: Retorna un JSON con estadísticas de verificaciones de ADN.
+    - Formato de Respuesta:
+      ```json
+      {
+          "count_mutant_dna": 40,
+          "count_human_dna": 100,
+          "ratio": 0.4
+      }
+      ```
 
-4. **Formato de la Solicitud**:
-   - La solicitud debe enviarse en formato JSON con el siguiente formato:
-     ```json
-     {
-       "dna": ["ATGCGA", "CAGTGC", "TTATGT", "AGAAGG", "CCCCTA", "TCACTG"]
-     }
-     ```
+## Requisitos de Escalabilidad
+La API está diseñada para manejar fluctuaciones agresivas de tráfico, con un rango estimado de entre 100 y 1 millón de peticiones por segundo.
 
-5. **Respuestas**:
-   - Si el ADN es de un mutante, se devuelve un código HTTP **200 OK**.
-   - Si el ADN pertenece a un humano, se devuelve un código HTTP **403 Forbidden**.
-
----
-
-## Nivel 3: Integración de Base de Datos y Estadísticas
-
-1. **Integración de H2**:
-   - Se ha anexado una base de datos H2 para almacenar los ADN verificados.
-   - Solo se permite un registro por ADN.
-
-2. **Endpoint de Estadísticas**:
-   - Un servicio adicional para exponer estadísticas de verificaciones de ADN:
-     ```
-     GET /stats
-     ```
-
-3. **Formato de Respuesta de Estadísticas**:
-   - La respuesta devuelve un JSON con el siguiente formato:
-     ```json
-     {
-       "count_mutant_dna": 40,
-       "count_human_dna": 100,
-       "ratio": 0.4
-     }
-     ```
-
-4. **Requisitos de Escalabilidad**:
-   - La API está diseñada para manejar fluctuaciones agresivas de tráfico, con un rango estimado de entre 100 y 1 millón de peticiones por segundo.
-
-5. **Pruebas Automáticas**:
-   - Se implementaron pruebas automáticas con una cobertura de código superior al **80%**.
-
----
-
-## Resultados de Pruebas
-
-- **Resultados de JMeter**:
-  - Los resultados obtenidos de las pruebas de carga con JMeter se encuentran en el documento PDF adjunto.
-
-- **Resultados de JaCoCo**:
-  - Los resultados de las pruebas automáticas y la cobertura de código con JaCoCo se encuentran en el documento PDF adjunto.
+## Pruebas Automáticas
+Se implementaron pruebas automáticas con una cobertura de código superior al **80%**. Los resultados de las pruebas de carga se realizaron con JMeter y están documentados.
 
 ## Entrega
-- Código Fuente: [Enlace al repositorio de GitHub](https://github.com/matiasalmendros/parcialmagneto)
-- Deploy: [Enlace al repositorio de render](https://parcialmagneto-kkq9.onrender.com)
-- Instrucciones de ejecución: Consultar el archivo README.md en el repositorio.
-- Documentación PDF: [Descargar aquí](URL_DEL_DOCUMENTO_PDF)
+- **Código Fuente**: [Enlace al repositorio de GitHub](https://github.com/matiasalmendros/parcialmagneto)
+- **Documentación PDF**: [Descargar aquí](URL_DEL_DOCUMENTO_PDF)
