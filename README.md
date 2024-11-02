@@ -54,4 +54,4 @@ Se implementaron pruebas automáticas con una cobertura de código superior al *
 
 ## Entrega
 - **Código Fuente**: [Enlace al repositorio de GitHub](https://github.com/matiasalmendros/parcialmagneto)
-- **Documentación PDF**: [Descargar aquí](URL_DEL_DOCUMENTO_PDF)
+- **Documentación PDF**: [(Datos extras.pdf)](https://github.com/matiasalmendros/parcialmagneto/blob/main/README.md)
