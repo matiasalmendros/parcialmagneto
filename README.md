@@ -18,7 +18,7 @@ Este proyecto tiene como objetivo detectar si un humano es un mutante basado en 
 ### Nivel 2: API REST para Detección de Mutantes
 - **Crear la API REST**: La API está diseñada para detectar si un humano es mutante mediante una secuencia de ADN.
 
-- **Hostear la API**: La API está hospedada en un servicio de cloud computing gratuito. [Enlace a la API](https://parcialmagneto-kkq9.onrender.com)
+- **Hostear la API**: La API está hospedada en un servicio de cloud computing gratuito. [Enlace a la API](https://parcialmagneto-kkq9.onrender.com/swagger-ui/index.html)
 
 - **Endpoints**:
   - **POST** `/mutant`:
